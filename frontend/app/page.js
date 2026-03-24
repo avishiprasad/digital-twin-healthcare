@@ -3,8 +3,10 @@
 import { useState } from "react";
 import axios from "axios";
 
-const CONDITIONS = ["Heart Failure", "Type 2 Diabetes", "Hypertension", "Pneumonia", "Sepsis", "CKD", "COPD"];
-const DRUG_SUGGESTIONS = ["Metformin", "Lisinopril", "Atorvastatin", "Amoxicillin", "Warfarin", "Insulin", "Furosemide"];
+const CONDITIONS = [  "Infection","Hypertension","Depression","Diabetes",  "Pain Relief"];
+const DRUG_SUGGESTIONS = ["Ciprofloxacin","Metoprolol","Bupropion","Glipizide","Paracetamol","Escitalopram",
+  "Metformin","Amlodipine","Ibuprofen","Tramadol","Azithromycin","Sertraline","Insulin Glargine","Losartan",
+  "Amoxicillin"];
 
 function getRiskLevel(risk) {
   if (risk < 35) return { label: "Low Risk", color: "#0F6E56", bg: "#E1F5EE", bar: "#1D9E75" };
@@ -46,7 +48,7 @@ export default function DigitalTwin() {
 
   const [form, setForm] = useState({
     age: "",
-    gender: "male",
+    gender: "Male",
     weight: "",
     condition: "",
     dosage: "",
@@ -170,16 +172,9 @@ export default function DigitalTwin() {
                   <label style={{ display: "block", fontSize: 12, fontWeight: 500, color: "#5F5E5A", marginBottom: 6, letterSpacing: "0.04em", textTransform: "uppercase" }}>Biological Sex</label>
                   <select value={form.gender} onChange={e => setForm({ ...form, gender: e.target.value })}
                     style={{ width: "100%", padding: "10px 14px", border: "1px solid #D3D1C7", borderRadius: 8, fontSize: 14, color: "#2C2C2A", background: "#FAFAF8" }}>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                   </select>
-                </div>
-                <div>
-                  <label style={{ display: "block", fontSize: 12, fontWeight: 500, color: "#5F5E5A", marginBottom: 6, letterSpacing: "0.04em", textTransform: "uppercase" }}>Weight (kg)</label>
-                  <input value={form.weight} onChange={e => setForm({ ...form, weight: e.target.value })}
-                    placeholder="e.g. 72" type="number"
-                    style={{ width: "100%", padding: "10px 14px", border: "1px solid #D3D1C7", borderRadius: 8, fontSize: 14, color: "#2C2C2A", background: "#FAFAF8" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: 12, fontWeight: 500, color: "#5F5E5A", marginBottom: 6, letterSpacing: "0.04em", textTransform: "uppercase" }}>Primary Diagnosis</label>
@@ -315,7 +310,7 @@ export default function DigitalTwin() {
               <p style={{ fontSize: 12, fontWeight: 600, color: "#888780", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>Patient Summary</p>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20, paddingBottom: 20, borderBottom: "1px solid #F1EFE8" }}>
                 <div style={{ width: 44, height: 44, borderRadius: "50%", background: "#E6F1FB", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, fontWeight: 700, color: "#185FA5" }}>
-                  {form.gender === "female" ? "F" : "M"}
+                  {form.gender === "Female" ? "F" : "M"}
                 </div>
                 <div>
                   <p style={{ fontSize: 15, fontWeight: 600, color: "#2C2C2A" }}>Patient #{patientId}</p>
@@ -324,7 +319,6 @@ export default function DigitalTwin() {
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
                 <StatPill label="Age" value={form.age} unit="yrs" />
-                <StatPill label="Weight" value={form.weight || "—"} unit="kg" />
               </div>
             </div>
           </div>
@@ -399,7 +393,7 @@ export default function DigitalTwin() {
             </div>
 
             <div style={{ display: "flex", gap: 12, paddingTop: 16, borderTop: "1px solid #E8E6DF" }}>
-              <button onClick={() => { setStep(1); setResults([]); setBestDrug(null); setSelectedDrugs([]); setForm({ age: "", gender: "male", weight: "", condition: "", dosage: "", duration: "" }); }}
+              <button onClick={() => { setStep(1); setResults([]); setBestDrug(null); setSelectedDrugs([]); setForm({ age: "", gender: "Male", weight: "", condition: "", dosage: "", duration: "" }); }}
                 style={{ padding: "11px 22px", background: "transparent", color: "#5F5E5A", border: "1px solid #D3D1C7", borderRadius: 8, fontSize: 14, fontWeight: 500, cursor: "pointer" }}>
                 New Simulation
               </button>
