@@ -2,7 +2,7 @@
 
 An AI-powered healthcare decision support system that simulates multiple treatment options for a patient and predicts potential side effects using Machine Learning. The application allows healthcare professionals to compare different medications under the same patient profile and recommends the treatment with the lowest predicted risk.
 
-## 🌐 Live Demo : digital-twin-healthcare.vercel.app
+## 🌐 Live Demo : [digital-twin-healthcare.vercel.app](https://digital-twin-healthcare.vercel.app/)
 
 ---
 
