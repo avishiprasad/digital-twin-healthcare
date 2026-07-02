@@ -1,0 +1,207 @@
+Live Demo:digital-twin-healthcare.vercel.app
+# 🧠 Digital Twin for Patient Treatment Simulation
+
+An AI-powered healthcare decision support system that simulates multiple treatment options for a patient and predicts potential side effects using Machine Learning. The application allows healthcare professionals to compare different medications under the same patient profile and recommends the treatment with the lowest predicted risk.
+
+---
+
+## 📌 Project Overview
+
+A Digital Twin is a virtual representation of a real-world entity. In this project, a patient's clinical profile acts as the digital twin. Instead of prescribing a treatment directly, the system simulates multiple drug options and predicts the most likely side effect for each treatment.
+
+The goal is to assist clinicians by providing AI-based insights before selecting a treatment.
+
+---
+
+## 🚀 Features
+
+- 👤 Patient Profile Builder
+  - Age
+  - Gender
+  - Medical Condition
+  - Dosage
+  - Treatment Duration
+
+- 💊 Multi-Drug Treatment Simulation
+  - Compare multiple medications for the same patient
+  - Predict side effects for each treatment
+
+- 🤖 Machine Learning Prediction
+  - Predicts the most probable side-effect category
+  - Generates a relative risk score
+
+- 📊 Treatment Comparison Dashboard
+  - Compare all simulated drugs
+  - Highlights the safest treatment option
+
+- ✅ AI Recommendation Engine
+  - Automatically recommends the treatment with the lowest predicted risk
+
+- 🎨 Modern Responsive UI
+  - Built using Next.js
+  - Tailwind CSS
+  - Interactive cards and risk visualization
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- Next.js
+- React.js
+- Tailwind CSS
+- Axios
+
+### Backend
+- FastAPI
+- Python
+
+### Machine Learning
+- Scikit-learn
+- Random Forest
+- Decision Tree
+- Logistic Regression
+- XGBoost
+
+### Dataset
+Healthcare Drug Dataset containing:
+
+- Patient Age
+- Gender
+- Medical Condition
+- Drug Name
+- Dosage
+- Treatment Duration
+- Side Effects
+
+---
+
+## 🧠 Machine Learning Pipeline
+
+### Data Preprocessing
+
+- Missing value handling
+- Label Encoding
+- Feature Selection
+- Train-Test Split
+
+### Feature Engineering
+
+Input Features:
+
+- Age
+- Gender
+- Medical Condition
+- Drug Name
+- Dosage
+- Treatment Duration
+
+Target:
+
+- Side Effect Category
+
+To improve prediction performance, similar side effects were grouped into broader clinical categories such as:
+
+- Gastrointestinal Issues
+- Neurological Disturbances
+- Skin Reactions
+- Fatigue & Tiredness
+- Low Blood Sugar
+- Other
+
+This reduced class imbalance and improved model performance.
+
+---
+
+## 📈 Models Evaluated
+
+The following machine learning models were trained and compared:
+
+- Random Forest
+- Decision Tree
+- Logistic Regression
+- XGBoost
+
+The final model was selected based on evaluation metrics including:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+---
+
+## 🏗 Project Structure
+
+```
+digital-twin/
+│
+├── backend/
+│   ├── main.py
+│   ├── rf_model.pkl
+│   ├── encoders.pkl
+│   ├── requirements.txt
+│
+├── frontend/
+│   ├── app/
+│   ├── public/
+│   ├── package.json
+│
+└── README.md
+```
+
+---
+
+
+## 📷 Workflow
+
+1. Enter patient information.
+2. Select multiple treatment options.
+3. Run treatment simulation.
+4. Backend predicts side effects for each drug.
+5. Risk scores are calculated.
+6. Results are compared.
+7. The safest treatment is recommended.
+
+---
+
+## 📊 Evaluation Metrics
+
+The project evaluates model performance using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+- Feature Importance
+
+---
+
+## 🔮 Future Improvements
+
+- Integration with real-world datasets such as MIMIC-III
+- Drug interaction prediction
+- Patient history management
+- Authentication for healthcare professionals
+- Electronic Health Record (EHR) integration
+- PDF report generation
+- Explainable AI (SHAP/LIME)
+- Cloud deployment
+
+---
+
+## 📚 Learning Outcomes
+
+This project demonstrates:
+
+- Machine Learning Pipeline
+- Data Preprocessing
+- Classification Models
+- Healthcare Analytics
+- FastAPI Backend Development
+- Next.js Frontend Development
+- REST API Integration
+- Full Stack AI Application Development
+
+---
