@@ -70,7 +70,7 @@ export default function DigitalTwin() {
   const handleSimulate = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/simulate", {
+      const res = await axios.post("https://digital-twin-healthcare.onrender.com/simulate", {
         age: parseInt(form.age),
         gender: form.gender,
         condition: form.condition,
