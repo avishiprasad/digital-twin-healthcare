@@ -1,19 +1,20 @@
-Live Demo:digital-twin-healthcare.vercel.app
 # 🧠 Digital Twin for Patient Treatment Simulation
 
 An AI-powered healthcare decision support system that simulates multiple treatment options for a patient and predicts potential side effects using Machine Learning. The application allows healthcare professionals to compare different medications under the same patient profile and recommends the treatment with the lowest predicted risk.
+
+## 🌐 Live Demo : digital-twin-healthcare.vercel.app
 
 ---
 
 ## 📌 Project Overview
 
-A Digital Twin is a virtual representation of a real-world entity. In this project, a patient's clinical profile acts as the digital twin. Instead of prescribing a treatment directly, the system simulates multiple drug options and predicts the most likely side effect for each treatment.
+A Digital Twin is a virtual representation of a real-world entity. In this project, a patient's clinical profile acts as the digital twin. Instead of prescribing a treatment directly, the system simulates multiple drug options and predicts the most likely side-effect category for each treatment.
 
 The goal is to assist clinicians by providing AI-based insights before selecting a treatment.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
 - 👤 Patient Profile Builder
   - Age
@@ -24,7 +25,7 @@ The goal is to assist clinicians by providing AI-based insights before selecting
 
 - 💊 Multi-Drug Treatment Simulation
   - Compare multiple medications for the same patient
-  - Predict side effects for each treatment
+  - Predict side-effect category for each treatment
 
 - 🤖 Machine Learning Prediction
   - Predicts the most probable side-effect category
@@ -80,7 +81,7 @@ Healthcare Drug Dataset containing:
 
 ### Data Preprocessing
 
-- Missing value handling
+- Data cleaning
 - Label Encoding
 - Feature Selection
 - Train-Test Split
@@ -115,25 +116,25 @@ This reduced class imbalance and improved model performance.
 
 ## 📈 Models Evaluated
 
-The following machine learning models were trained and compared:
-
 - Random Forest
 - Decision Tree
 - Logistic Regression
 - XGBoost
 
-The final model was selected based on evaluation metrics including:
+Models were evaluated using:
 
 - Accuracy
 - Precision
 - Recall
 - F1 Score
 
+The best-performing model was selected for deployment.
+
 ---
 
 ## 🏗 Project Structure
 
-```
+```text
 digital-twin/
 │
 ├── backend/
@@ -153,21 +154,19 @@ digital-twin/
 ---
 
 
-## 📷 Workflow
+## 🔄 Workflow
 
 1. Enter patient information.
 2. Select multiple treatment options.
 3. Run treatment simulation.
-4. Backend predicts side effects for each drug.
-5. Risk scores are calculated.
-6. Results are compared.
+4. Backend predicts side-effect category for each drug.
+5. Risk scores are generated.
+6. Treatments are compared.
 7. The safest treatment is recommended.
 
 ---
 
 ## 📊 Evaluation Metrics
-
-The project evaluates model performance using:
 
 - Accuracy
 - Precision
@@ -178,30 +177,30 @@ The project evaluates model performance using:
 
 ---
 
-## 🔮 Future Improvements
+## 🚀 Future Enhancements
 
-- Integration with real-world datasets such as MIMIC-III
+- Integration with MIMIC-III clinical dataset
 - Drug interaction prediction
-- Patient history management
-- Authentication for healthcare professionals
 - Electronic Health Record (EHR) integration
-- PDF report generation
 - Explainable AI (SHAP/LIME)
-- Cloud deployment
+- PDF report generation
+- Personalized dosage optimization
+- Authentication for healthcare professionals
 
 ---
 
-## 📚 Learning Outcomes
-
-This project demonstrates:
+## 🎓 Learning Outcomes
 
 - Machine Learning Pipeline
-- Data Preprocessing
-- Classification Models
 - Healthcare Analytics
+- Classification Algorithms
 - FastAPI Backend Development
 - Next.js Frontend Development
 - REST API Integration
-- Full Stack AI Application Development
+- Full-Stack AI Application Development
 
----
+
+
+## 📄 License
+
+This project is developed for academic and educational purposes.
